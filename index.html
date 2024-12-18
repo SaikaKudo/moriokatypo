@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>moriokatypo</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'xvl3rid',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+</head>
+
+<body>
+    <div class="loader">
+        <img src="img/load.png">
+    </div>
+
+    <header class="header">
+        <div class="navtext-container">
+          <div class="navtext"><a href="index.html">盛岡弁辞典</a></div>
+          <ul class="index">
+              <li data-filter="all" class="is-active index_li">ALL</li>
+              <li data-filter="line_A" class="index_li">あ</li>
+              <li data-filter="line_Ka" class="index_li">か</li>
+              <li data-filter="line_Sa" class="index_li">さ</li>
+              <li data-filter="line_Ta" class="index_li">た</li>
+              <li data-filter="line_Na" class="index_li">な</li>
+              <li data-filter="line_Ha" class="index_li">は</li>
+              <li data-filter="line_Ma" class="index_li">ま</li>
+              <li data-filter="line_Wa" class="index_li">わ</li>
+          </ul>
+        </div>
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon"><span class="navicon"></span></label>
+        <ul class="menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="adarihodori.html">あだりほどり</a></li>
+          <li><a href="abe.html">あんべ</a></li>
+          <li><a href="inzui.html">いんずい</a></li>
+          <li><a href="oshosu.html">おしょす</a></li>
+          <li><a href="occhanko.html">おっちゃんこ</a></li>
+          <li><a href="obandesu.html">おばんです</a></li>
+          <li><a href="kamasu.html">かます</a></li>
+          <li><a href="kikanekikane.html">きかねきかね！</a></li>
+          <li><a href="kyappari.html">きゃっぱり</a></li>
+          <li><a href="guzuramozura.html">ぐずらもずら</a></li>
+          <li><a href="kobirikko.html">こびりっこ</a></li>
+          <li><a href="kowai.html">こわい</a></li>
+          <li><a href="gonbohori.html">ごんぼほり</a></li>
+          <li><a href="sasaranai.html">ささらない</a></li>
+          <li><a href="shibareru.html">しばれる</a></li>
+          <li><a href="ja.html">じゃ！</a></li>
+          <li><a href="sunee.html">すねえ</a></li>
+          <li><a href="sekkogi.html">せっこき</a></li>
+          <li><a href="dakarasa.html">だからさ</a></li>
+          <li><a href="tatsutto.html">たつっと</a></li>
+          <li><a href="chosu.html">ちょす</a></li>
+          <li><a href="nageru.html">なげる</a></li>
+          <li><a href="hakahaka.html">はっかはっか</a></li>
+          <li><a href="futatsukeruzo.html">ふたつけるぞ</a></li>
+          <li><a href="pekko.html">ぺっこ</a></li>
+          <li><a href="honzune.html">ほんずね</a></li>
+          <li><a href="menkoi.html">めんこい</a></li>
+          <li><a href="mottsumotsu.html">もっつもっつ</a></li>
+          <li><a href="wagane.html">わがんね</a></li>
+          <li><a href="nda.html">んだ</a></li>
+        </ul>
+    </header>
+
+    <div class="item">
+        <div data-item="line_A" class="items"><a href="abe.html"><img src="img/abe.webp" alt="abe"></a></div>
+        <div data-item="line_A" class="items"><a href="adarihodori.html"><img src="img/adarihodori.webp" alt="adarihodori"></a></div>
+        <div data-item="line_A" class="items"><a href="inzui.html"><img src="img/inzui.webp" alt="inzui"></a></div>
+        <div data-item="line_A" class="items"><a href="oshosu.html"><img src="img/oshosu.webp" alt="oshosu"></a></div>
+        <div data-item="line_A" class="items"><a href="occhanko.html"><img src="img/occhanko.webp" alt="occhanko"></a></div>
+        <div data-item="line_A" class="items"><a href="obandesu.html"><img src="img/obandesu.webp" alt="obandesu"></a></div>
+        <div data-item="line_Ka" class="items"><a href="kamasu.html"><img src="img/kamasu.webp" alt="kamasu"></a></div>
+        <div data-item="line_Ka" class="items"><a href="kikanekikane.html"><img src="img/kikanekikane.webp" alt="kikanekikane"></a></div>
+        <div data-item="line_Ka" class="items"><a href="kyappari.html"><img src="img/kyappari.webp" alt="kyappari"></a></div>
+        <div data-item="line_Ka" class="items"><a href="guzuramozura.html"><img src="img/guzuramozura.webp" alt="guzuramozura"></a></div>
+        <div data-item="line_Ka" class="items"><a href="kobirikko.html"><img src="img/kobirikko.webp" alt="kobirikko"></a></div>
+        <div data-item="line_Ka" class="items"><a href="kowai.html"><img src="img/kowai.webp" alt="kowai"></a></div>
+        <div data-item="line_Ka" class="items"><a href="gonbohori.html"><img src="img/gonbohori.webp" alt="gonbohori"></a></div>
+        <div data-item="line_Sa" class="items"><a href="sasaranai.html"><img src="img/sasaranai.webp" alt="sasaranai"></a></div>
+        <div data-item="line_Sa" class="items"><a href="shibareru.html"><img src="img/shibareru.webp" alt="shibareru"></a></div>
+        <div data-item="line_Sa" class="items"><a href="ja.html"><img src="img/ja.webp" alt="ja"></a></div>
+        <div data-item="line_Sa" class="items"><a href="sunee.html"><img src="img/sunee.webp" alt="sunee"></a></div>
+        <div data-item="line_Sa" class="items"><a href="sekkogi.html"><img src="img/sekkogi.webp" alt="sekkogi"></a></div>
+        <div data-item="line_Ta" class="items"><a href="dakarasa.html"><img src="img/dakarasa.webp" alt="dakarasa"></a></div>
+        <div data-item="line_Ta" class="items"><a href="tatsutto.html"><img src="img/tatsutto.webp" alt="tattsuto"></a></div>
+        <div data-item="line_Ta" class="items"><a href="chosu.html"><img src="img/chosu.webp" alt="chosu"></a></div>
+        <div data-item="line_Na" class="items"><a href="nageru.html"><img src="img/nageru.gif" alt="nageru"></a></div>
+        <div data-item="line_Ha" class="items"><a href="hakahaka.html"><img src="img/hakahaka.webp" alt="hakahaka"></a></div>
+        <div data-item="line_Ha" class="items"><a href="futatsukeruzo.html"><img src="img/futatsukeruzo.webp" alt="futatsukeruzo"></a></div>
+        <div data-item="line_Ha" class="items"><a href="pekko.html"><img src="img/pekko.webp" alt="pekko"></a></div>
+        <div data-item="line_Ha" class="items"><a href="honzune.html"><img src="img/honzune.webp" alt="honzune"></a></div>
+        <div data-item="line_Ma" class="items"><a href="menkoi.html"><img src="img/menkoi.webp" alt="menkoi"></a></div>
+        <div data-item="line_Ma" class="items"><a href="mottsumotsu.html"><img src="img/mottsumotsu.webp" alt="mottsumotsu"></a></div>
+        <div data-item="line_Wa" class="items"><a href="wagane.html"><img src="img/wagane.webp" alt="wagane"></a></div>
+        <div data-item="line_Wa" class="items"><a href="nda.html"><img src="img/nda.webp" alt="nda"></a></div>    
+    </div>
+
+
+    <!-- 索引クリックで切り替わるjquery -->
+    <script>
+        $(function() {
+            // ページが完全にロードされたら実行
+            $('#menu-btn').prop('checked', false); // チェックボックスを未チェックにする
+        });
+
+        // リンクをクリックした際にも閉じる処理を追加
+        $('.menu a').on('click', function() {
+            $('#menu-btn').prop('checked', false);
+        });
+
+        $(function() {
+            function end_loader() {
+                $('.loader').fadeOut(800);
+            }
+            $(window).on('load', function () {
+                setTimeout(function () {
+                end_loader();
+                }, 3000)
+            })
+
+            // 変数を要素をセット
+            let $filter = $('.index [data-filter]'),
+                $item = $('.item [data-item]');
+
+            // カテゴリをクリックしたら
+            $filter.click(function(e) {
+                e.preventDefault();
+                let $this = $(this);
+
+                // クリックしたカテゴリにクラスを付与
+                $filter.removeClass('is-active');
+                $this.addClass('is-active');
+
+                // クリックした要素のdata属性を取得
+                let $filterItem = $this.attr('data-filter');
+
+                // データ属性が all なら全ての要素を表示
+                if ($filterItem == 'all') {
+                    $item.fadeOut().promise().done(function() {
+                        $item.addClass('is-active').fadeIn();
+                    });
+                } else {
+                    $item.fadeOut().promise().done(function() {
+                        $item.filter('[data-item="' + $filterItem + '"]').addClass('is-active').fadeIn();
+
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

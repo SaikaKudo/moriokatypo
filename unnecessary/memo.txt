@@ -1,0 +1,115 @@
+【2024年11月20日現在　見るに耐えうるコード】
+〜HTML〜
+    <h1>盛岡弁辞典</h1>
+
+    <ul class="index">
+        <li data-filter="all" class="is-active">ALL</li>
+        <li data-filter="line_A">あ</li>
+        <li data-filter="line_Ka">か</li>
+        <li data-filter="line_Sa">さ</li>
+        <li data-filter="line_Ta">た</li>
+        <li data-filter="line_Na">な</li>
+        <li data-filter="line_Ha">は</li>
+        <li data-filter="line_Ma">ま</li>
+        <li data-filter="line_Ya">わ</li>
+    </ul>
+
+    <div class="item">
+        <div data-item="line_A" class="items"><img src="img/futatsukeruzo.png"></div>
+        <div data-item="line_Ka" class="items"><img src="img/futatsukeruzo.png"></div>
+        <div data-item="line_Sa" class="items"><img src="img/futatsukeruzo.png"></div>
+        <div data-item="line_Ta" class="items"><img src="img/futatsukeruzo.png"></div>
+        <div data-item="line_Na" class="items"><img src="img/futatsukeruzo.png"></div>
+        <div data-item="line_Ha" class="items"><img src="img/futatsukeruzo.png"></div>
+        <div data-item="line_Ma" class="items"><img src="img/futatsukeruzo.png"></div>
+        <div data-item="line_Ya" class="items"><img src="img/futatsukeruzo.png"></div>
+    </div>
+
+
+    <!-- 索引クリックで切り替わるjquery -->
+    <script>
+    $(function() {
+        // 変数を要素をセット
+        let $filter = $('.index [data-filter]'),
+            $item = $('.item [data-item]');
+
+        // カテゴリをクリックしたら
+        $filter.click(function(e) {
+            e.preventDefault();
+            let $this = $(this);
+
+            // クリックしたカテゴリにクラスを付与
+            $filter.removeClass('is-active');
+            $this.addClass('is-active');
+
+            // クリックした要素のdata属性を取得
+            let $filterItem = $this.attr('data-filter');
+
+            // データ属性が all なら全ての要素を表示
+            if ($filterItem == 'all') {
+                $item.fadeOut().promise().done(function() {
+                    $item.addClass('is-active').fadeIn();
+                });
+            } else {
+                $item.fadeOut().promise().done(function() {
+                    $item.filter('[data-item="' + $filterItem + '"]').addClass('is-active').fadeIn();
+                });
+            }
+        });
+    });
+    </script>
+
+
+
+〜CSS〜
+html{
+    font-family: toppan-bunkyu-midashi-min-st, serif;
+    font-style: normal;
+    font-weight: 900;
+}
+
+h1{
+    text-align: center;
+}
+
+.index{
+    padding: 0;
+    margin:0,auto;
+    text-align: center;
+    margin-bottom:0.5em;
+}
+
+.index li{
+    list-style: none;
+    display: inline;
+}
+
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.items{
+    width:calc(100%/3);
+}
+
+.item img{
+    width:100%;
+}
+
+@media screen and (min-width:751px){
+    .items{
+        width:20%;
+    }
+
+    .item img{
+        width:100%;
+    }
+
+    .typo_container::after{
+        display: block;
+        content:"";
+        width: 80%;
+    }
+}

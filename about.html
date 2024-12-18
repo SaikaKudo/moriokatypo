@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="about.css" rel="stylesheet" type="text/css">
+    <title>moriokatypo</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'xvl3rid',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+</head>
+
+
+<body>
+  <header class="header">
+    <div class="navtext-container">
+      <div class="navtext"><a href="index.html">盛岡弁辞典</a></div>
+      <!-- <ul class="index">
+          <li data-filter="all" class="is-active">ALL</li>
+          <li data-filter="line_A">あ</li>
+          <li data-filter="line_Ka">か</li>
+          <li data-filter="line_Sa">さ</li>
+          <li data-filter="line_Ta">た</li>
+          <li data-filter="line_Na">な</li>
+          <li data-filter="line_Ha">は</li>
+          <li data-filter="line_Ma">ま</li>
+          <li data-filter="line_Wa">わ</li>
+      </ul> -->
+    </div>
+    <input type="checkbox" class="menu-btn" id="menu-btn">
+    <label for="menu-btn" class="menu-icon"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="adarihodori.html">あだりほどり</a></li>
+      <li><a href="abe.html">あんべ</a></li>
+      <li><a href="inzui.html">いんずい</a></li>
+      <li><a href="oshosu.html">おしょす</a></li>
+      <li><a href="occhanko.html">おっちゃんこ</a></li>
+      <li><a href="obandesu.html">おばんです</a></li>
+      <li><a href="kamasu.html">かます</a></li>
+      <li><a href="kikanekikane.html">きかねきかね！</a></li>
+      <li><a href="kyappari.html">きゃっぱり</a></li>
+      <li><a href="guzuramozura.html">ぐずらもずら</a></li>
+      <li><a href="kobirikko.html">こびりっこ</a></li>
+      <li><a href="kowai.html">こわい</a></li>
+      <li><a href="gonbohori.html">ごんぼほり</a></li>
+      <li><a href="sasaranai.html">ささらない</a></li>
+      <li><a href="shibareru.html">しばれる</a></li>
+      <li><a href="ja.html">じゃ！</a></li>
+      <li><a href="sunee.html">すねえ</a></li>
+      <li><a href="sekkogi.html">せっこき</a></li>
+      <li><a href="dakarasa.html">だからさ</a></li>
+      <li><a href="tatsutto.html">たつっと</a></li>
+      <li><a href="chosu.html">ちょす</a></li>
+      <li><a href="nageru.html">なげる</a></li>
+      <li><a href="hakahaka.html">はっかはっか</a></li>
+      <li><a href="futatsukeruzo.html">ふたつけるぞ</a></li>
+      <li><a href="pekko.html">ぺっこ</a></li>
+      <li><a href="honzune.html">ほんずね</a></li>
+      <li><a href="menkoi.html">めんこい</a></li>
+      <li><a href="mottsumotsu.html">もっつもっつ</a></li>
+      <li><a href="wagane.html">わがんね</a></li>
+      <li><a href="nda.html">んだ</a></li>
+    </ul>
+  </header>
+  
+  <main>
+          <!-- 盛岡弁辞典とは？制作背景 -->
+          <h2>【盛岡弁辞典とは？】</h2>
+          <div class="flex_content">
+              <p>
+                盛岡弁辞典とは、岩手県盛岡市周辺で使われる方言「盛岡弁」を
+                「作字」と呼ばれる表現方法を用いて表現し、辞書形式にまとめたものです。<br>
+                <br>
+                言葉の持つ空気感や雰囲気をグラフィックデザインに起こし、音声と共に盛岡弁や方言の良さを再確認できます。<br>
+                <br>
+                日常会話で使われるものから、少しユニークな言い回しまで幅広く取り上げ、３０語取り揃えられています。<br>
+                <br>
+                盛岡弁に触れたことがある人もない人も、少しでも方言に対するネガティブなイメージを払拭し、楽しんでいただけると幸いです。
+              </p>
+              <img src="img/dictionary.png" class="fadein">
+          </div>
+            
+            <h2>【制作背景】</h2>
+            <div class="grid_content">
+              <p>
+                近年、方言は若者を中心に使用頻度が減少し、地域の伝統文化が薄れつつあります。
+                また、方言に対する「古い」「田舎くさい」といった否定的なイメージも課題です。
+                本プロジェクトでは、盛岡弁の新たな価値を発信するため、現代的なデザインと技術を活用。
+                東北方言に対するネガティブなイメージを払拭し、多くの人に盛岡弁の温かさと奥深さ、個性豊かな様子を知ってもらうことを目指し、
+                卒業制作として制作しました。
+              </p>
+              <!-- <img src="img/worry.png" class="worry"> -->
+
+              <div class="grid_img1">
+                <h3>田舎くさいイメージ</h3>
+                <img src="img/inaka_image.png" class="fadein grid_img">
+              </div>
+
+              <div class="grid_img2">
+                <h3>古くさいイメージ</h3>
+                <img src="img/old_image.png" class="fadein grid_img">
+              </div>
+
+              <div class="grid_img3">
+                <h3>STOP!方言の消滅</h3>
+                <img src="img/shometsu.png" class="fadein grid_img">
+              </div>
+            </div>
+            
+
+          <!-- これまでの取り組み・制作者について -->
+          <h2>【これまでの取り組み】</h2>
+          <div class="flex_content">
+              <p>
+                2024年1月、大妻女子大学千代田キャンパスH棟エントランスホールにて開催された中野ゼミの展示に出品しました。<br>
+                <br>
+                本展示では、自身が制作したA1サイズのパネルを通じて、ゼミで取り組んだ成果を発表しました。
+                このパネルには、企画の背景や目的、制作プロセス、そして得られた成果を視覚的にわかりやすくまとめ、来場者に伝えやすい工夫を施しました。<br>
+                <br>
+                こちらのWEBサイトは、実際の展示をWEBサイトに落とし込んだものです。
+              </p>
+              <img src="img/tenji.png" class="fadein">
+          </div>
+            
+          <h2>【制作者について】</h2>
+          <div class="flex_content">
+            <p>
+              工藤才佳<br>
+              岩手県盛岡市出身<br>
+              大妻女子大学社会情報学部社会情報学科情報デザイン専攻<br>
+              中野ゼミ所属<br>
+            </p>
+            <!-- <img src="img/me.png" class="fadein"> -->
+          </div>
+  </main>
+  <footer>
+    &copy; Saika Kudo 2024
+  </footer>
+</body>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const fadeInElements = document.querySelectorAll("img.fadein");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-animated");
+      }
+    });
+  });
+
+  fadeInElements.forEach((el) => observer.observe(el));
+});
+
+</script>
+</html>

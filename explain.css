@@ -1,0 +1,284 @@
+html{
+    font-family: toppan-bunkyu-midashi-min-st, serif;
+    font-style: normal;
+    font-weight: 900;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(270deg, #CCCAB6, #D6D1A7);
+    background-size: 200% 200%;
+    animation: Grad 5s ease infinite;
+    color: #333;
+}
+
+@keyframes Grad {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+h1 a{
+    text-decoration: none;
+    color: #333;
+}
+
+h1 a::visited{
+    color: #333;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-right:auto;
+    margin-left:auto;
+    max-width: 1000px;
+    box-sizing: border-box;
+    margin-top:5em;
+    margin-bottom: 5em;
+}
+
+.section1,
+.section2 {
+    flex: 1;
+    min-width: 300px;
+    box-sizing: border-box;
+    padding-left:1em;
+}
+
+.section1 img {
+    width: 90%;
+    height: auto;
+    display: block;
+    border: solid 1px #777777;
+}
+
+.words {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.sounds img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.explain{
+    font-size:1.2em;
+}
+
+.section2 div:last-child img {
+    width: 30%;
+    height: auto;
+    margin: 10px 5px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: transform 0.2s ease;
+}
+
+.section2 div:last-child img:hover {
+    transform: scale(1.1);
+}
+
+.other-words h2{
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+
+/* スマホレイアウト (縦並び) */
+@media (max-width: 767px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .section1,
+    .section2 {
+        flex: 1 0 auto; /* 縦並び */
+        /* margin-bottom: 20px; */
+    }
+
+}
+
+ /* Navbar & Navmenu color */
+ :root {
+    --background-navbar: #525659;
+  }
+  
+  .header {
+    top: 0;
+    background: var(--background-navbar);
+    position:sticky;
+    width: 100%;
+    height:5em;
+  }
+  
+  /* Nav items */
+  .menu {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-height: 80vh; /* 画面高さの80%に制限 */
+    overflow-y: auto; /* 縦方向スクロールを有効に */
+    top: 0;
+    margin-top: 52px;
+    padding: 0 0 10px 0;
+    clear: both;
+    background: var(--background-navbar);
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+    transform: scale(1, 0);
+    transform-origin: top;
+  }
+  
+  /* Hamburger menu button */
+  .menu-btn:checked ~ .menu {
+    transform: scale(1, 1);
+    transform-origin: top;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  }
+  
+  /* Hamburger menbu text */
+  .menu a {
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ddd;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .menu li {
+    border-top: 1px solid rgb(75, 75, 75);
+    padding: 15px 0;
+    margin: 0 54px;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .menu-btn:checked ~ .menu a,
+  .menu-btn:checked ~ .menu li {
+    opacity: 1;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
+  }
+  
+  .menu-btn {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 30px 20px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  .navicon {
+    background: #ddd;
+    display: block;
+    height: 3px;
+    width: 26px;
+    position: relative;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  }
+  
+  .navicon:before,
+  .navicon:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #ddd;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  }
+  
+  .navicon:before {
+    top: 9px;
+  }
+  
+  .navicon:after {
+    bottom: 9px;
+  }
+  
+  /* Hamburger Menu Animation Start */
+  .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before {
+    top: 0;
+  }
+  .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    bottom: 0;
+  }
+  
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: rgba(0, 0, 0, 0);
+    transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  }
+  /* Hamburger Menu Animation End */
+  
+  /* Navbar Container */
+  .navtext-container {
+    width: 100%;
+    height: 5em;
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right:2em;
+    
+  }
+  
+  /* Navbar Text */
+  .navtext {
+    position: absolute;
+    text-transform: uppercase;
+    color: #ddd;
+    letter-spacing: 4px;
+    font-size: 1.2em;
+  }
+
+  .navtext a{
+    text-decoration: none;
+    color:#fff;
+  }
+
+  .navtext a::visited{
+    color:#fff;
+  }
+
+
+  .index{
+    padding: 0.2em;
+    margin-top:1em;
+    margin-right:auto;
+    margin-left:auto;
+    text-align: center;
+    letter-spacing: 4px;
+
+}
+
+.index li{
+    list-style: none;
+    display: inline;
+}

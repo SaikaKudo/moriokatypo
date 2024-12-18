@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="explain.css" rel="stylesheet" type="text/css">
+    <title>moriokatypo</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'xvl3rid',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+
+</head>
+<body>
+  <header class="header">
+    <div class="navtext-container">
+      <div class="navtext"><a href="index.html">盛岡弁辞典</a></div>
+    </div>
+    <input type="checkbox" class="menu-btn" id="menu-btn">
+    <label for="menu-btn" class="menu-icon"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="adarihodori.html">あだりほどり</a></li>
+      <li><a href="abe.html">あんべ</a></li>
+      <li><a href="inzui.html">いんずい</a></li>
+      <li><a href="oshosu.html">おしょす</a></li>
+      <li><a href="occhanko.html">おっちゃんこ</a></li>
+      <li><a href="obandesu.html">おばんです</a></li>
+      <li><a href="kamasu.html">かます</a></li>
+      <li><a href="kikanekikane.html">きかねきかね！</a></li>
+      <li><a href="kyappari.html">きゃっぱり</a></li>
+      <li><a href="guzuramozura.html">ぐずらもずら</a></li>
+      <li><a href="kobirikko.html">こびりっこ</a></li>
+      <li><a href="kowai.html">こわい</a></li>
+      <li><a href="gonbohori.html">ごんぼほり</a></li>
+      <li><a href="sasaranai.html">ささらない</a></li>
+      <li><a href="shibareru.html">しばれる</a></li>
+      <li><a href="ja.html">じゃ！</a></li>
+      <li><a href="sunee.html">すねえ</a></li>
+      <li><a href="sekkogi.html">せっこき</a></li>
+      <li><a href="dakarasa.html">だからさ</a></li>
+      <li><a href="tatsutto.html">たつっと</a></li>
+      <li><a href="chosu.html">ちょす</a></li>
+      <li><a href="nageru.html">なげる</a></li>
+      <li><a href="hakahaka.html">はっかはっか</a></li>
+      <li><a href="futatsukeruzo.html">ふたつけるぞ</a></li>
+      <li><a href="pekko.html">ぺっこ</a></li>
+      <li><a href="honzune.html">ほんずね</a></li>
+      <li><a href="menkoi.html">めんこい</a></li>
+      <li><a href="mottsumotsu.html">もっつもっつ</a></li>
+      <li><a href="wagane.html">わがんね</a></li>
+      <li><a href="nda.html">んだ</a></li>
+    </ul>
+  </header>
+
+  <div class="wrapper">
+    <div class="section1">
+      <img src="img/sasaranai.webp">
+    </div>
+    
+    <div class="section2">
+      <h2 class="words">【ささらない】</h2>
+      <div class="sounds">
+        <img src="img/icon_sounds.png" onclick="playSound()">
+        <audio id="sound" src="audio/sasaranai.wav" preload="auto"></audio>
+      </div>
+
+      <div class="explain">
+        自らの意に反して、希望の動作が達成できないこと<br>
+        使用例：このペン、インクが無くて書かさらない。<br>
+        訳：インクがないため、このペンでは書くことができない。<br>
+      </div>
+
+      <div class="other-words">
+        <h2>他の言葉を見る</h2>
+        <div id="random-links"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  function playSound() {
+      var sound = document.getElementById('sound');
+      sound.play();  // 音声を再生
+  }
+
+  // ランダムに選びたいデータをオブジェクト形式で定義
+  const words = [
+    { file: "abe.html", img: "img/abe.webp", alt: "abe" },
+    { file: "adarihodori.html", img: "img/adarihodori.webp", alt: "adarihodori" },
+    { file: "chosu.html", img: "img/chosu.webp", alt: "chosu" },
+    { file: "dakarasa.html", img: "img/dakarasa.webp", alt: "dakarasa" },
+    { file: "futatsukeruzo.html", img: "img/futatsukeruzo.webp", alt: "futatsukeruzo" },
+    { file: "gonbohori.html", img: "img/gonbohori.webp", alt: "gonbohori" },
+    { file: "guzuramozura.html", img: "img/guzuramozura.webp", alt: "guzuramozura" },
+    { file: "hakahaka.html", img: "img/hakahaka.webp", alt: "hakahaka" },
+    { file: "honzune.html", img: "img/honzune.webp", alt: "honzune" },
+    { file: "inzui.html", img: "img/inzui.webp", alt: "inzui" },
+    { file: "ja.html", img: "img/ja.webp", alt: "ja" },
+    { file: "kamasu.html", img: "img/kamasu.webp", alt: "kamasu" },
+    { file: "kikanekikane.html", img: "img/kikanekikane.webp", alt: "kikanekikane" },
+    { file: "kobirikko.html", img: "img/kobirikko.webp", alt: "kobirikko" },
+    { file: "kowai.html", img: "img/kowai.webp", alt: "kowai" },
+    { file: "kyappari.html", img: "img/kyappari.webp", alt: "kyappari" },
+    { file: "menkoi.html", img: "img/menkoi.webp", alt: "menkoi" },
+    { file: "mottsumotsu.html", img: "img/mottsumotsu.webp", alt: "mottsumotsu" },
+    { file: "nageru.html", img: "img/nageru.gif", alt: "nageru" },
+    { file: "nda.html", img: "img/nda.webp", alt: "nda" },
+    { file: "obandesu.html", img: "img/obandesu.webp", alt: "obandesu" },
+    { file: "occhanko.html", img: "img/occhanko.webp", alt: "occhanko" },
+    { file: "oshosu.html", img: "img/oshosu.webp", alt: "oshosu" },
+    { file: "pekko.html", img: "img/pekko.webp", alt: "pekko" },
+    { file: "sekkogi.html", img: "img/sekkogi.webp", alt: "sekkogi" },
+    { file: "shibareru.html", img: "img/shibareru.webp", alt: "shibareru" },
+    { file: "sunee.html", img: "img/sunee.webp", alt: "sunee" },
+    { file: "tatsutto.html", img: "img/tatsutto.webp", alt: "tatsutto" },
+    { file: "wagane.html", img: "img/wagane.webp", alt: "wagane" }
+  ];
+
+
+  // ランダムに選択する関数
+  function getRandomWords(array, count) {
+    const shuffled = array.sort(() => 0.5 - Math.random()); // 配列をランダムにシャッフル
+    return shuffled.slice(0, count); // 指定された数だけ返す
+  }
+
+  // ランダムなデータを取得
+  const randomWords = getRandomWords(words, 2); // 例: 2つのランダムなデータを取得
+
+  // HTMLを生成して挿入
+  const randomLinksContainer = document.getElementById("random-links");
+  randomWords.forEach(word => {
+    const anchor = document.createElement("a");
+    anchor.href = word.file;
+
+    const img = document.createElement("img");
+    img.src = word.img;
+    img.alt = word.alt;
+
+    anchor.appendChild(img);
+    randomLinksContainer.appendChild(anchor);
+  });
+</script>
+ 
+</html>
